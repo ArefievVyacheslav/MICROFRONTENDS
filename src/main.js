@@ -4,15 +4,21 @@ import { createStore } from './store/index.js'
 window.store = createStore()
 
 registerApplication(
-  'vue',
-  () => import('./vue/vue.app.js'),
+  'general',
+  () => import('./general/src/main.js'),
   () => location.pathname.startsWith('/')
 )
 
 registerApplication(
-  'react',
-  () => import('./react/react.app.js'),
+  'dashboard',
+  () => import('./dashboard/src/main.js'),
   () => location.pathname.startsWith('/')
+)
+
+registerApplication(
+  'crm',
+  () => import('./crm/src/main.js'),
+  () => location.pathname.startsWith('/') || location.pathname.startsWith('/crm')
 )
 
 start()

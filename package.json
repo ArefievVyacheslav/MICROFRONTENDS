@@ -22,7 +22,10 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2",
     "style-loader": "^2.0.0",
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.12",
@@ -31,6 +34,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.38",
+    "process": "^0.11.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "single-spa": "^5.9.3",

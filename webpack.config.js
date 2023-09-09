@@ -26,7 +26,24 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/, // Расширения файлов изображений, которые вы хотите обрабатывать
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]', // Имя файла после сборки
+              outputPath: 'images/', // Путь, куда будут сохранены изображения
+            },
+          },
+        ],
+      }
     ],
+  },
+  resolve: {
+    alias: {
+      process: "process/browser"
+    }
   },
   devServer: {
     port: 3000,
